@@ -28,7 +28,7 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-create procedure [dbo].[sp_personas] @nombre varchar(50), @apellido varchar(50), @edad int, @genero varchar(10)
+create procedure [dbo].[sp_personas] 
 as
 begin
 
