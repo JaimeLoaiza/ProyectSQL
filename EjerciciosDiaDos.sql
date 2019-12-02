@@ -38,7 +38,6 @@ create procedure sp_ejercicioDiaDos
 as
 begin
 
-Select * From Persona CROSS JOIN Vehiculo;
-
+Select per.Nombre, per.Apellido, per.Edad, per.Genero, veh.NombreVehiculo, veh.Modelo, veh.Kilometraje, veh.Color FROM [ProyectVisual.Net].[dbo].Persona as per LEFT JOIN [ProyectVisual.Net].dbo.Vehiculo as veh ON per.IdVehiculo = veh.IdVehiculo WHERE veh.IdVehiculo = per.IdVehiculo 
 end
 go
