@@ -66,9 +66,16 @@ create procedure sp_ejercicioDiaTres
 as
 begin
 
-Select per.Nombre, per.Apellido, per.Edad, per.Genero, veh.NombreVehiculo, veh.Modelo, veh.Kilometraje, veh.Color, cas.Nombre, cas.Direccion, cas.MetrosCuadrados, nac.NombrePais FROM [ProyectVisual.Net].[dbo].Persona as per LEFT JOIN [ProyectVisual.Net].[dbo].Vehiculo as veh ON per.IdPersona = veh.IdVehiculo LEFT JOIN [ProyectVisual.Net].[dbo].Casa as cas ON per.IdPersona = cas.IdCasa LEFT JOIN [ProyectVisual.Net].[dbo].Nacionalidad as nac ON per.IdPersona = nac.IdNacionalidad
+Select per.Nombre, per.Apellido, per.Edad, per.Genero, veh.NombreVehiculo, veh.Modelo, veh.Kilometraje, veh.Color, cas.Nombre, cas.Direccion, cas.MetrosCuadrados, nac.NombrePais FROM [ProyectVisual.Net].[dbo].Persona as per INNER JOIN [ProyectVisual.Net].[dbo].Vehiculo as veh ON per.IdVehiculo = veh.IdVehiculo INNER JOIN [ProyectVisual.Net].[dbo].Casa as cas ON per.IdCasa = cas.IdCasa INNER JOIN [ProyectVisual.Net].[dbo].Nacionalidad as nac ON per.IdNacionalidad = nac.IdNacionalidad
 
-Delete From [ProyectVisual.Net].[dbo].Persona WHERE IdPersona = 2
+end
+go
+
+create procedure sp_ejercicioDiaTres_6
+as
+begin
+
+Delete From [ProyectVisual.Net].[dbo].Persona WHERE IdPersona = 1
 
 end
 go
