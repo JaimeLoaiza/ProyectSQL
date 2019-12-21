@@ -75,7 +75,7 @@ create procedure sp_ejercicioDiaTres_6
 as
 begin
 
-Delete From [ProyectVisual.Net].[dbo].Persona WHERE IdPersona = 1
+Delete From [ProyectVisual.Net].[dbo].Persona WHERE IdPersona = IdPersona;
 
 end
 go
